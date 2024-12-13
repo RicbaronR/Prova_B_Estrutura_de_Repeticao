@@ -1,0 +1,33 @@
+
+<script>
+    //Problema: Contar consoantes
+    /*
+    Peça para o usuário inserir uma frase.
+    Conte quantas consoantes existem na frase e retorne a quantidade encontrada.
+
+    UTILIZE FOR...OF!
+    */
+
+    //ENTRADA
+    const frase = prompt(`Informe uma frase:`).toLowerCase().trim().replaceAll(" ", "");
+    let listaVogais = ["a", "e", "i","o","u","á","é","í","ó","ú","ã","ẽ","ĩ","õ","ũ","â","ê","î","ô","û","à","è","ì","ò","ù"];
+    let vogais = 0;
+    let consoantes = 0;
+
+    //PROCESSAMENTO
+    for(caractere of frase){
+        
+            if(listaVogais.includes(caractere)){
+                vogais++     
+            }else{
+                consoantes++
+            }
+        
+        
+    }
+    
+
+
+    //SAÍDA
+    document.write(`A quantidade de consoantes na frase informada é: ${consoantes}.`)
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script>
+    //Problema: Pirâmide de números
+    /*
+    Peça para o usuário inserir um número.
+    Crie uma pirâmide de números com a quantidade de linhas igual ao número informado.
+    Exemplo: Se o usuário informar 4, a pirâmide será:
+    1
+    12
+    123
+    1234
+    123
+    12
+    1
+    UTILIZE FOR COM VARIÁVEL DE CONTROLE!
+    */
+
+    //ENTRADA
+    const numInformado = Number(prompt(`Informe um número:`));
+    let listaNum = [];
+    let listaInverso = [];
+    let contador = 0;
+
+    //PROCESSAMENTO
+    for (let num = 1; num<=numInformado; num++){
+        if(!listaNum.includes(num)){
+            listaNum.push(num);
+            document.write(`${listaNum.join(", ")}<br>`);
+        }
+    }
+    for(let numInverso = numInformado; numInverso > 1; numInverso--){
+            listaNum.pop();
+            document.write(`${listaNum.join(", ")}<br>`);   
+    }
+
+
+    //SAÍDA
+    
+</script>
